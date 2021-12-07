@@ -132,12 +132,12 @@ export default class CustomTextEditorWebPart extends BaseClientSideWebPart<ICust
         };
     }
 
-    private setRteContentProp(content: string) {
+    private setRteContentProp(content: string): void {
         this.properties.Content = content;
         this.properties.searchableContent = `${this.properties.title}|${this.properties.Content}`;
     }
 
-    private setTitle(title: string) {
+    private setTitle(title: string): void {
         this.properties.title = title;
         this.properties.searchableContent = `${this.properties.title}|${this.properties.Content}`;
     }
@@ -147,7 +147,7 @@ export default class CustomTextEditorWebPart extends BaseClientSideWebPart<ICust
      *
      * @param args The new theme
      */
-     private _handleThemeChangedEvent(args: ThemeChangedEventArgs) {
+     private _handleThemeChangedEvent(args: ThemeChangedEventArgs): void {
         this._themeVariant = args.theme;
         this.render();
     }
