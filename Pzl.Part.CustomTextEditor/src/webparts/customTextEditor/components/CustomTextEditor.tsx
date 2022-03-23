@@ -176,6 +176,14 @@ export default class CustomTextEditor extends React.Component<ICustomTextEditorP
                             -webkit-font-smoothing: ${fonts.large.WebkitFontSmoothing};
                             -moz-osx-font-smoothing: ${fonts.large.MozOsxFontSmoothing};
                          }
+                         .mce-content-body pre {
+                            background-color: rgb(248, 248, 248);
+                            color: rgb(38, 38, 38);
+                            white-space: pre-wrap;
+                            overflow-wrap: break-word;
+                            font-size: 14px;
+                            padding: 3px;
+                        }
                     `,
                     autoresize_bottom_margin: 50,
                     max_height: 500,
