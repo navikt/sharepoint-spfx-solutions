@@ -15,15 +15,7 @@
     }
 }
 
-.body {
-    a {
-        color: "[theme: themePrimary, default: rgb(0, 103, 197)]";
-    }
-    &__inverted {
-        a {
-            color: inherit;
-        }
-    }
+@mixin body-text {
     h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
     }
@@ -34,5 +26,19 @@
         overflow-wrap: break-word;
         font-size: 14px;
         padding: 3px;
+    }
+}
+
+.body {
+    @include body-text;
+    a {
+        color: "[theme: themePrimary, default: rgb(0, 103, 197)]";
+    }
+}
+
+.body__inverted {
+    @include body-text;
+    a {
+        color: inherit;
     }
 }
